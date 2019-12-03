@@ -18,41 +18,14 @@ const SiteFooter = ({ variant, ...props }) => {
             <A
               display="inline-flex"
               alignItems="center"
-              href="https://cloudflare.design"
+              href="https://louderthanten.design"
               fontWeight={700}
               fontSize={3}
-            >
-              <Logo variant="mark" width={32} />
-              <Span ml={2}>Cloudflare Design</Span>
-            </A>
-
+            >Louder Than Ten Design</A>
             <P fontSize={2} mt={2} mb={0}>
-              We're growing our teams in San Francisco, London, and Austin! We
-              welcome applications from everyone and especially encourage
-              applications from underrepresented minorities.
-            </P>
-            <P fontSize={2}>
-              To apply, please email{" "}
-              <A
-                color="gray.0"
-                fontWeight={600}
-                href="mailto:designjobs@cloudflare.com"
-              >
-                designjobs@cloudflare.com
-              </A>{" "}
-              with your portfolio and 3-5 sentences about why you're interested
-              in joining our team.
-            </P>
-            <P fontSize={2}>
-              You can find our{" "}
-              <A
-                color="gray.0"
-                href="https://www.cloudflare.com/careers/departments/"
-                fontWeight={600}
-              >
-                open positions here
-              </A>
-              .
+              Adapted from <A
+              href="https://cloudflare.design/color/"
+            >Color by Cloudflare Design</A>
             </P>
           </Div>
           <Div width={[1, 1 / 4]}>

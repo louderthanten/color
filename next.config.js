@@ -24,11 +24,11 @@ const fetchFiles = filePath => {
 }
 
 module.exports = withMDX({
-  target: "serverless",
+  target: "server",
   env: {
-    assetPrefix: isProd ? `https://${pkg.name}.cloudflare.design` : ""
+    assetPrefix: isProd ? `http://design.ltt/colour/out/` : "http://design.ltt/colour/out/"
   },
-  assetPrefix: isProd ? `https://${pkg.name}.cloudflare.design` : "",
+  assetPrefix: isProd ? `http://design.ltt/colour/out/` : "http://design.ltt/colour/out/",
   webpack: (config, {}) => {
     const elements = fetchFiles(path.join(__dirname, "elements"))
     const components = fetchFiles(path.join(__dirname, "components"))

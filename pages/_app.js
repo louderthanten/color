@@ -5,7 +5,6 @@ import { Global, css } from "@emotion/core"
 import createStore from "unistore"
 import { Provider } from "unistore/react"
 import { ThemeProvider } from "emotion-theming"
-import { initGA, logPageView } from "../utils/analytics"
 import { get, set } from "idb-keyval"
 
 import theme from "../theme"
@@ -25,15 +24,11 @@ const getState = async (store, defaultState) => {
 const store = createStore(defaultState)
 
 if (typeof window !== "undefined") {
-  initGA()
   store.subscribe(async state => await set("state", state))
   getState(store, defaultState)
 }
 
 export default class MyApp extends App {
-  componentDidMount() {
-    logPageView()
-  }
 
   render() {
     const { Component, pageProps } = this.props
@@ -53,9 +48,9 @@ export default class MyApp extends App {
             property="og:image"
             content="https://cloudflare-assets.s3.amazonaws.com/palette-card.jpg"
           />
-          <meta property="og:url" content="https://cloudflare.design/color" />
-          <meta name="twitter:site" content="@cloudflare" />
-          <meta property="og:title" content="Color by Cloudflare Design" />
+          <meta property="og:url" content="https://louderthanten.design/colour" />
+          <meta name="twitter:site" content="@louderthanten" />
+          <meta property="og:title" content="Louder Than Ten Colour" />
           <meta
             property="og:description"
             content="A color palette tool for interface design"
